@@ -1,5 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
+import ParticlesBackground from "../../components/ParticlesBackground";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,10 +22,31 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
+          async
+        ></script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ParticlesBackground />
+
+        {/* Fixed Navbar */}
+        <div className="fixed top-0 left-0 right-0 z-50">
+          <Navbar />
+        </div>
+
+        {/* Content with padding to avoid overlap */}
+        <main className="h-[calc(100vh-96px)] mt-[64px] mb-[32px] overflow-hidden">
+          {children}
+        </main>
+
+        {/* Fixed Footer */}
+        <div className="fixed bottom-0 left-0 right-0 z-50">
+          <Footer />
+        </div>
       </body>
     </html>
   );
