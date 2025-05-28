@@ -52,8 +52,7 @@ export default function Home() {
                   and business goals. I actively collaborate with stakeholders
                   and engineering teams to turn complex requirements into
                   elegant, maintainable code driving both technical excellence
-                  and user satisfaction. Let&apos;s turn your ideas into powerful
-                  digital experiences.
+                  and user satisfaction. Let&apos;s turn your ideas into powerful digital experiences.
                 </span>
               </p>
               <a
@@ -68,7 +67,7 @@ export default function Home() {
             <div className="flex justify-end items-start">
               <img
                 src="/Assets/profile1.jpg"
-                alt="Rushikesh coding"
+                alt="Profile Image"
                 className="top-0 right-0 md:w-[350px] h-auto object-cover rounded-lg shadow-lg blur-1xl opacity-15 "
               />
             </div>
