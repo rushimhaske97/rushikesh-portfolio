@@ -1,39 +1,37 @@
 "use client";
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const [isHovering, setIsHovering] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => setIsClient(true), []);
+
+  const links = ['/', '/About', '/Projects', '/Resume', '/Contact'];
+  const labels = ['Home', 'About', 'Projects', 'Resume', 'Contact'];
 
   return (
-    <nav
-      style={{ backgroundColor: '#171a19' }}
-      className="text-white p-4 shadow-lg"
-    >
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
-        {/* Logo / Name */}
-        <h1 className="text-2xl font-extrabold text-white tracking-wide">
-          Rushikesh Mhaske
-        </h1>
+    <nav style={{ backgroundColor: '#2a2b37' }} className="text-white p-4 shadow-lg">
+      <div className="w-full px-15 flex justify-between items-center">
+        <h1 className="text-2xl font-extrabold tracking-wide">Rushikesh Mhaske</h1>
 
-        {/* Navigation Links */}
         <div className="flex items-center space-x-6 text-[#b0b2c3] font-medium text-lg">
-          <Link href="/" className="hover:text-white transition duration-200">Home</Link>
-          <Link href="/About" className="hover:text-white transition duration-200">About</Link>
-          <Link href="/Projects" className="hover:text-white transition duration-200">Projects</Link>
-          <Link href="/Resume" className="hover:text-white transition duration-200">Resume</Link>
-          <Link href="/Contact" className="hover:text-white transition duration-200">Contact</Link>
+          {links.map((href, i) => (
+            <Link key={href} href={href} className="hover:text-white transition duration-200">
+              {labels[i]}
+            </Link>
+          ))}
 
-          {/* CTA Button with Emoji */}
           <Link href="/Contact">
             <button
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
-              className="ml-4 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg shadow transition duration-300 flex items-center space-x-2"
+              className="ml-4 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg shadow transition duration-300 flex items-center space-x-2 animate-pulse"
             >
               <span>Hire Me</span>
-              <span>{isHovering ? '😄' : '😔'}</span>
+              <span>{isClient && isHovering ? '🤩' : '😄'}</span>
             </button>
           </Link>
         </div>
