@@ -50,7 +50,7 @@ export default function Navbar() {
               <span>Hire Me</span>
               <span>{isClient && isHovering ? "🤩" : "😄"}</span>
             </button>
-          </Link>
+          </Link> 
         </div>
       </div>
 
