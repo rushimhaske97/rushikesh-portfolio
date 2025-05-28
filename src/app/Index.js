@@ -8,7 +8,8 @@ export default function Home() {
         <title>Rushikesh Mhaske | Full Stack Developer</title>
       </Head>
       <main className="p-10">
-        <h1 className="text-4xl font-bold">Hi, Im Rushikesh 👋</h1>
+        <h1 className="text-4xl font-bold">Hi, I&apos;m Rushikesh 👋</h1>
+
         <p className="mt-4 text-lg">
           Full Stack Developer | React.js, REST APIs, SQL, Node.js
         </p>

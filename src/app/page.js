@@ -36,7 +36,7 @@ export default function Home() {
             {/* Left Side: Intro Text */}
             <div className="flex flex-col gap-8 text-left">
               <br></br>
-              <h1 className="text-4xl font-bold">Hi, I'm Rushikesh 👋</h1>
+              <h1 className="text-4xl font-bold">Hi, I&apos;m Rushikesh 👋</h1>
               <p className="text-lg max-w-xl">
                 I specialize in{" "}
                 <span
@@ -52,7 +52,7 @@ export default function Home() {
                   and business goals. I actively collaborate with stakeholders
                   and engineering teams to turn complex requirements into
                   elegant, maintainable code driving both technical excellence
-                  and user satisfaction. Let’s turn your ideas into powerful
+                  and user satisfaction. Let&apos;s turn your ideas into powerful
                   digital experiences.
                 </span>
               </p>
