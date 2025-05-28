@@ -29,10 +29,10 @@ export default function Home() {
   return (
     <>
 
-      <div className="flex flex-col min-h-screen overflow-x-hidden p-10 pt-24">
+      <div className="flex flex-col min-h-screen min-w-screen overflow-x-hidden p-10 pt-24">
         {/* Hero Section */}
-        <section className="w-full px-4 sm:px-10 mt-[-80px]">
-          <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-18">
+        <section className="min-w-screen px-4 sm:px-10 mt-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-10">
             {/* Left Side: Intro Text */}
             <div className="flex flex-col gap-8 text-left">
               <br></br>
@@ -68,7 +68,8 @@ export default function Home() {
               <img
                 src="/Assets/profile1.jpg"
                 alt="Profile Image"
-                className="top-0 right-0 md:w-[350px] h-auto object-cover rounded-lg shadow-lg blur-1xl opacity-15 "
+                className="top-500 right-0 object-cover rounded-lg shadow-lg blur-1xl opacity-15 "
+                style={{ width: "850px", height:"1550px" }}
               />
             </div>
           </div>
