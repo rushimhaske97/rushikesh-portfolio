@@ -38,7 +38,7 @@ export default function Home() {
               <br></br>
               <h1 className="text-4xl font-bold">Hi, I&apos;m Rushikesh 👋</h1>
               <p className="text-lg max-w-xl">
-                I specialize in{" "}
+                I specialize in 
                 <span
                   ref={typedRef}
                   className="text-blue-600 font-semibold italic tracking-wider text-lg font-span"
