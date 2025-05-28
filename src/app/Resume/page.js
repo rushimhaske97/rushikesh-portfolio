@@ -9,7 +9,7 @@ export default function Resume() {
         src="/RushiMhaskeResume.pdf"
         title="Rushikesh Mhaske Resume"
         className="w-full max-w-4xl h-140 border-2 border-white rounded-md"
-      />
+      /> 
     </div>
   );
 }

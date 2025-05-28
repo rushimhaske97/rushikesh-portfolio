@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 
+
 export default function ParticlesBackground() {
   useEffect(() => {
     if (typeof window !== "undefined" && window.particlesJS) {
